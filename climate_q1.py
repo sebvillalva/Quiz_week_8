@@ -1,3 +1,12 @@
+import sqlite3
+
+connection = sqlite3.connect(r'C:\Users\User\Documents\Week8Quiz\climate.db')
+
+cursor = connection.cursor()
+
+cursor.execute('SELECT * FROM ClimateData')
+data = cursor.fetchall()
+
 import matplotlib.pyplot as plt
         
 years = []
